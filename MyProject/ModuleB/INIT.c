@@ -26,7 +26,7 @@ int Data()
 {
     char dataname[100]={"\0"};
     FILE *fp;
-    int i=0;
+    int i=0,c;
     printf("输入课程信息文件名：");
     scanf("%s",dataname);
     if((fp=fopen(dataname,"r"))==NULL)
@@ -35,8 +35,10 @@ int Data()
     while(!feof(fp))
     {
         fscanf(fp,"%s %s %s %d %d %d %d",cou[i].cou_num,cou[i].cou_name,cou[i].cou_nature,&cou[i].cou_time,&cou[i].cou_credit,&cou[i].cou_stu_num_al,&cou[i].cou_num_limit);
+	c=fgetc(fp);
         i++;
     }
+    i--;
     fclose(fp);
     SX(i);
     return i;
@@ -48,7 +50,7 @@ int INIT()
 {
     int x,n=0,i=0;
     FILE *fq;
-    system("cls");
+    system("clear");
     printf("++++++++++++信息初始化++++++++++\n");
     printf("+          1、键盘输入         +\n");
     printf("+          2、文件输入         +\n");
@@ -57,7 +59,7 @@ int INIT()
     printf("进入选项：");
     scanf("%d",&x);
     if(x==3)
-        system("cls");
+        system("clear");
     switch(x)
     {
         case 1:
@@ -67,7 +69,7 @@ int INIT()
             n=Data();//文件输入
             break;
         default :
-            system("cls");
+            system("clear");
             break;       //返回
     }
     if((fq=fopen("cou.txt","w"))==NULL)

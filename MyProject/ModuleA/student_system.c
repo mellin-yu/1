@@ -23,6 +23,7 @@ int student_system()
         fscanf(fq,"%d",&cou[i].cou_num_limit);
         i++;
     }
+    i--;
     k=i;
     fclose(fq);
     SX(i);

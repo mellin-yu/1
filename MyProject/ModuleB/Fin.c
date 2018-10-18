@@ -58,11 +58,11 @@ int FIN(int n)
             }
         else
         {
-            system("cls");
+            system("clear");
             return 0;
         }
         if(x==3)
-            system("cls");
+            system("clear");
     }
     return 0;
 }

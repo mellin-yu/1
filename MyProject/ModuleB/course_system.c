@@ -4,7 +4,7 @@
 #include "include_pub.h"
 int course_system()
 {
-    int x,i,n,k;
+    int x,i=0,n,k;
     FILE *fp;
     char dataname[100]={"\0"};
     FILE *fq;
@@ -12,9 +12,10 @@ int course_system()
         exit(0);
     while(!feof(fq))
     {
-        fscanf(fp,"%s %s %s %d",stu[i].stu_num,stu[i].stu_name,stu[i].stu_C_al,&stu[i].stu_credit);
+        fscanf(fq,"%s %s %s %d",stu[i].stu_num,stu[i].stu_name,stu[i].stu_C_al,&stu[i].stu_credit);
         i++;
     }
+    i--;
     k=i;
     fclose(fq);
     px(k);

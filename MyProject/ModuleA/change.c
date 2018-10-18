@@ -20,7 +20,7 @@ int xh(int n,int dw,char num[])
         i++;
     }
     strcpy(t[dw].stu_num,num);
-    fprintf(fs,"new:%s %s %s %d\n",t[dw].stu_num,t[dw].stu_name,t[dw].stu_C_al,t[dw].stu_credit);
+    fprintf(fs,"new:%s %s %s %d\n\t",t[dw].stu_num,t[dw].stu_name,t[dw].stu_C_al,t[dw].stu_credit);
     stu[n]=t[dw];
     n++;
     px(n);
@@ -31,7 +31,7 @@ int xm(int n,int dw,char name[])
 {
     n=del(n,dw);
     strcpy(t[dw].stu_name,name);
-    fprintf(fs,"new:%s %s %s %d\n",t[dw].stu_num,t[dw].stu_name,t[dw].stu_C_al,t[dw].stu_credit);
+    fprintf(fs,"new:%s %s %s %d\n\t",t[dw].stu_num,t[dw].stu_name,t[dw].stu_C_al,t[dw].stu_credit);
     stu[n]=t[dw];
     n++;
     px(n);
@@ -85,7 +85,7 @@ int kc(int n,int dw,char les[],int k)
         les[strlen(les)-1]='\0';
     n=del(n,dw);
     strcpy(t[dw].stu_C_al,les);
-    fprintf(fs,"new:%s %s %s %d\n",t[dw].stu_num,t[dw].stu_name,t[dw].stu_C_al,t[dw].stu_credit);
+    fprintf(fs,"new:%s %s %s %d\n\t",t[dw].stu_num,t[dw].stu_name,t[dw].stu_C_al,t[dw].stu_credit);
     stu[n]=t[dw];
     n++;
     px(n);
@@ -162,7 +162,7 @@ int change(int n,int k)
         scanf("%c",&ch);
         if('Y'==ch)
         {
-	    fprintf(fs,"old:%s %s %s %d\n",t[dw].stu_num,t[dw].stu_name,t[dw].stu_C_al,t[dw].stu_credit);
+	    fprintf(fs,"old:%s %s %s %d\n\t",t[dw].stu_num,t[dw].stu_name,t[dw].stu_C_al,t[dw].stu_credit);
             printf("++++++++++信息修改++++++++++\n");
             printf("+       1、修改学号        +\n");
             printf("+       2、修改姓名        +\n");

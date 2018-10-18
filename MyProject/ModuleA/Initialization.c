@@ -54,6 +54,7 @@ int data(int n)
     char course[5][10]={"\0"};
     FILE *fp;
     int i=0,j,k,a;
+    int c;
     printf("输入学生信息文件名：");
     scanf("%s",dataname);
     if((fp=fopen(dataname,"r"))==NULL)
@@ -62,7 +63,7 @@ int data(int n)
     while(!feof(fp))
     {
         fscanf(fp,"%s %s %s %d",stu[i].stu_num,stu[i].stu_name,stu[i].stu_C_al,&stu[i].stu_credit);
-
+        
         a=0;
         for(j=0;j<strlen(stu[i].stu_C_al);j++)
         {
@@ -90,6 +91,7 @@ int data(int n)
         i++;
     }
     fclose(fp);
+    i--;
     px(i);
     return i;
 }
@@ -115,12 +117,12 @@ int Initialization(int k)
         case 1:
 	    fprintf(fs,"%s\t","键盘输入:");
             n=keyboard(k);//键盘输入
-	    fprintf(fs,"n=%d\t",n);
+	    fprintf(fs,"n=%d\n\t",n);
             break;
         case 2:
 	    fprintf(fs,"%s\t","文件输入:");
             n=data(k);//文件输入
-	    fprintf(fs,"n=%d\t",n);
+	    fprintf(fs,"n=%d\n\t",n);
             break;
         default :
             system("clear");
