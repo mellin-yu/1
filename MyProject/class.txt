@@ -1,0 +1,5 @@
+0001 yuwen bixiu 40 5 30 40
+0002 shuxue bixiu 40 5 22 40
+0003 yingyu bixiu 35 5 35 40
+0004 sixiu xuanxiu 20 3 50 60
+0005 makesi xuanxiu 20 2 40 50
