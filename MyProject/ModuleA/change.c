@@ -140,6 +140,7 @@ int change(int n,int k)
             for(i=0;i<m;i++)
                 printf("%s %s %s %d\n",t[i].stu_num,t[i].stu_name,t[i].stu_C_al,t[i].stu_credit);
         }
+
         if(m>1)
         {
             getchar();
